@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Ranille Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Ranille Normal'), url('fonts/RanilleNormalRegular-axEpm.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+/* ==== navbar ==== */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 15vh;
+    background-color: transparent; 
+}
+
+.navbar .logo {
+    font-family: 'Ranille';
+    font-size: 3rem;
+    color: #000;
+}
+
+.navbar .menu {
+    width: 35%;
+}
+
+.navbar .menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar .menu-list a {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+.navbar .menu-list a.active {
+    border-bottom : 2px solid #000;
+}
+
+.navbar .icons {
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+
+.navbar .icons i {
+    color: #000;
+}
+
+
+/* body */
+
+.body {
+    height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.body .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .container .col-1 {
+    flex-basis: 40%;
+    padding: 2.5% 0 0 2.5%;
+}
+
+.body .container .col-1 h2 {
+    font-size: 10vh;
+    line-height: 13vh;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin: 2.5% 0 0 10%;
+    position: relative;
+}
+
+.body .container .col-1 h2:after {
+    content: "";
+    height: 3px;
+    width: 10vw;
+    background-color: #000;
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+}
+
+.body .container .col-1 h4 {
+    font-size: 3vh;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 10% 0px 0px 10%;
+}
+
+
+/* === Slider ==== */
+
+.slider { 
+    margin-left: 10%; 
+}
+
+/* slider buttons/controls */
+
+.slider .controls {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 40px 20px 0px;
+}
+
+.slider .controls .btn {
+    font-size: 18px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.slider .controls .next {
+    margin-left: 20px;
+}
+
+.slider .controls .btn.active {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.slider .controls .btn:hover {
+    background-color: #b1aeaecb;
+    border-radius: 50%;
+}
+
+/* slider items */
+
+.slider .slider_list {
+    list-style: none;
+    display: flex;
+}
+
+.slider .slider_item {
+    width: 170px;
+    height: 150px;
+    margin-right: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 0;
+    background-color: #F6CFC2;
+}
+
+.slider .slider_item img {
+    width: 80px;
+    height: 100px;
+}
+
+.slider .slider_item .text {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.slider .item_one {
+    background-color: #F6CFC2;
+}
+
+.slider .item_two {
+    background-color: #F2E8C3;
+}
+
+.slider .item_three {
+    background-color: #C9F0F2;
+}
+
+.slider .item_four {
+    background-color: #CDEDD8 ;
+}
+
+.slider .item_five {
+    background-color: #ECC8BD ;
+}
+
+.slider .item_six {
+    background-color: #E5CAEF ;
+}
+
+.slider .item_seven {
+    background-color: #B8D0FF ;
+}
+
+.slider .item_eight {
+    background-color: #FBC26D ;
+}
+
+.slider .item_nine {
+    background-color: #FFABDD ;
+}
+
+.slider .item_ten {
+    background-color: #FFE6A6 ;
+}

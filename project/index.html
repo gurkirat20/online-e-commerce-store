@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Persona | Online Clothing Store</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- ==== CSS file ==== -->
+        <link rel="stylesheet" href="index.css">
+        <!-- ==== Font awesome ==== -->
+        <script src="https://kit.fontawesome.com/b3ac121c74.js" crossorigin="anonymous"></script>  
+        <!-- ==== Google fonts ==== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    </head>
+
+    <body>
+
+        <!-- ==== Home section ==== -->
+        <section class="home" id="home">
+            
+            <!-- === Navbar ==== -->
+            <nav class="navbar">
+
+                <div class="logo">
+                    <span>persona.</span>
+                </div>
+
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li><a href="index.html" class="active">HOME</a></li>
+                        <li><a href="mens.html">MENS</a></li>
+                        <li><a href="womens.html">WOMENS</a></li>
+                        <li><a href="kids.html">KIDS</a></li>
+                        <li><a href="new_arrival.html">NEW ARRIVALS</a></li>
+                    </ul>
+                </div>
+
+                <div class="icons">
+                    <button class="btn" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <button class="btn" type="button">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="btn" type="button">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="btn" type="button">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+
+            </nav>  
+
+            <main class="main">
+                
+                <div class="container">
+                    <h1>Choose your outfit<br>according to your<br>personality</h1>
+                    <p>Find your perfect outfit from our<br>amazing collection which portrays<br>your character....</p>
+                    <a href="#">Explore</a>
+                </div>
+
+            </main>
+
+        </section>
+
+        <!-- ==== Top Products -->
+        <section class="top-products" id="top-products">
+
+                <div class="text-buttons-container">
+                    <span class="top">TOP</span><br>
+                    <span class="products">PRODUCTS</span>
+                    <div class="buttons">
+                        <button id="back" onclick=traversalRight(0)>
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button id="forward" onclick=traversalLeft(0)>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div> 
+
+                
+
+                <div class="cards-container">
+                    <div class="reel-div">
+                        <div class="card">
+                            <div class="card-image jacket-1"></div>
+                            <div class="card-text">
+                                <h1 class="card-title">RED BOMBER JACKET</h1>
+                                <p class="card-desc">30% off</p>
+                                <a class="card-button">View Product <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image shoes-1"></div>
+                            <div class="card-text">
+                                <h1 class="card-title">JAGO SNEAKERS</h1>
+                                <p class="card-desc">40% off</p>
+                                <a class="card-button">View Product <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image sweater-1"></div>
+                            <div class="card-text">
+                                <h1 class="card-title">CROCHET SWEATER</h1>
+                                <p class="card-desc">30% off</p>
+                                <a class="card-button">View Product <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image jacket-2"></div>
+                            <div class="card-text">
+                                <h1 class="card-title">SUEDE BIKER JACKET</h1>
+                                <p class="card-desc">20% off</p>
+                                <a class="card-button">View Product <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image Hoodie-1"></div>
+                            <div class="card-text">
+                                <h1 class="card-title">DOUBLE HOODIE</h1>
+                                <p class="card-desc">45% off</p>
+                                <a class="card-button">View Product <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image Hoodie-2"></div>
+                            <div class="card-text">
+                                <h1 class="card-title">RABBIT HOODIE</h1>
+                                <p class="card-desc">20% off</p>
+                                <a class="card-button">View Product <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image shirts-1"></div>
+                            <div class="card-text">
+                                <h1 class="card-title">WOMEN'S FALL SHIRTS</h1>
+                                <p class="card-desc">50% off</p>
+                                <a class="card-button">View Product <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+
+        <section class="categories" id="categories">
+
+            <h1 class="section-title">CATEGORIES</h1>
+
+            <div class="categories-row">
+                <div>
+                    <div class="item r1-one"></div>
+                    <span>Shirts</span>
+                </div>
+                <div>
+                    <div class="item r1-two"></div>
+                    <span>Shoes</span>
+                </div>
+                <div>
+                    <div class="item r1-three"></div>
+                    <span>Jackets</span>
+                </div>
+                <div>
+                    <div class="item r1-four"></div>
+                    <span>T-Shirts</span>
+                </div>
+                <div>
+                    <div class="item r1-five"></div>
+                    <span>Shorts</span>
+                </div>
+            </div>
+
+            <div class="categories-row">
+                <div>
+                    <div class="item r2-one"></div>
+                    <span>Kurtis</span>
+                </div>
+                <div>
+                    <div class="item r2-two"></div>
+                    <span>Mini-Dresses</span>
+                </div>
+                <div>
+                    <div class="item r2-three"></div>
+                    <span>Tops</span>
+                </div>
+                <div>
+                    <div class="item r2-four"></div>
+                    <span>Heels</span>
+                </div>
+                <div>
+                    <div class="item r2-five"></div>
+                    <span>Handbags</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="indian-wear" id="indian-wear">
+
+            <h1 class="section-title">TRENDING IN INDIAN WEAR</h1>
+
+            <div class="indian-wear-row">
+                
+                <div class="content">
+                    <div class="image img-1"></div>
+                    <div class="text">
+                        <h4 class="name">Geometric Print Flared Kurta</h4>
+                        <span class="price">Rs. 680</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-2"></div>
+                    <div class="text">
+                        <h4 class="name">Zari Weaving Art Silk Sare</h4>
+                        <span class="price">Rs. 1,663</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-3"></div>
+                    <div class="text">
+                        <h4 class="name">Indian Print Gown Dress</h4>
+                        <span class="price">Rs. 1,019</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-4"></div>
+                    <div class="text">
+                        <h4 class="name">Printed Tiered Shrug Dress</h4>
+                        <span class="price">Rs. 1,505</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-5"></div>
+                    <div class="text">
+                        <h4 class="name">Floral Print Fit & Flare Dress</h4>
+                        <span class="price">Rs. 1,210</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="indian-wear-row">
+                
+                <div class="content">
+                    <div class="image2 img2-1"></div>
+                    <div class="text">
+                        <h4 class="name">Blue Ethnic Motifs Printed Kurta</h4>
+                        <span class="price">Rs. 897</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-2"></div>
+                    <div class="text">
+                        <h4 class="name">Men Solid Kurta with Nehru Jacket</h4>
+                        <span class="price">Rs. 1,959</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-3"></div>
+                    <div class="text">
+                        <h4 class="name">Black & Pink Self-Design Sherwani Set</h4>
+                        <span class="price">Rs. 1,924</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-4"></div>
+                    <div class="text">
+                        <h4 class="name">Burgundy Woven Design Straight Kurta</h4>
+                        <span class="price">Rs. 899</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-5"></div>
+                    <div class="text">
+                        <h4 class="name">Grey & Black Kurta with Churidar</h4>
+                        <span class="price">Rs. 2149</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==== Western wear section ==== -->
+        <section class="western-wear" id="western-wear">
+
+            <h1 class="section-title">TRENDING IN WESTERN WEAR</h1>
+
+            <div class="western-wear-row">
+                
+                <div class="content">
+                    <div class="image img-1"></div>
+                    <div class="text">
+                        <h4 class="name">Basic Red Jumpsuit with ruffles</h4>
+                        <span class="price">Rs. 880</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-2"></div>
+                    <div class="text">
+                        <h4 class="name">Women Black Embroidered A-Line Dress</h4>
+                        <span class="price">Rs. 1,063</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-3"></div>
+                    <div class="text">
+                        <h4 class="name">Women Black printed wrap dress</h4>
+                        <span class="price">Rs. 999</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-4"></div>
+                    <div class="text">
+                        <h4 class="name">Women Maroon Solid Tiered Maxi Dress</h4>
+                        <span class="price">Rs. 1,205</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-5"></div>
+                    <div class="text">
+                        <h4 class="name">Women Black & Golden Block Print Maxi Dress</h4>
+                        <span class="price">Rs. 820</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="western-wear-row">
+                
+                <div class="content">
+                    <div class="image2 img2-1"></div>
+                    <div class="text">
+                        <h4 class="name">Men Single-Breasted Formal Suit</h4>
+                        <span class="price">Rs. 3,897</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-2"></div>
+                    <div class="text">
+                        <h4 class="name">Men Black Solid Bandhgala Formal Suit</h4>
+                        <span class="price">Rs. 2,259</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-3"></div>
+                    <div class="text">
+                        <h4 class="name">Men Blue & Pink Printed Bandhgala Suit</h4>
+                        <span class="price">Rs. 2,824</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-4"></div>
+                    <div class="text">
+                        <h4 class="name">Men Black Solid Slim Fit Bandhgala Suit</h4>
+                        <span class="price">Rs. 6,899</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-5"></div>
+                    <div class="text">
+                        <h4 class="name">Men Grey Slim Fit Solid Single-Breasted 3-Piece Suit</h4>
+                        <span class="price">Rs. 12,149</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==== Sports wear section ==== -->
+        <section class="sports-wear" id="sports-wear">
+
+            <h1 class="section-title">TRENDING IN SPORTS WEAR</h1>
+
+            <div class="sports-wear-row">
+                
+                <div class="content">
+                    <div class="image img-1"></div>
+                    <div class="text">
+                        <h4 class="name">Women Cherry Solid Rapid-Dry Running T-shirt</h4>
+                        <span class="price">Rs. 780</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-2"></div>
+                    <div class="text">
+                        <h4 class="name">Women Navy Blue Swedish Pop Solid Joggers</h4>
+                        <span class="price">Rs. 860</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-3"></div>
+                    <div class="text">
+                        <h4 class="name">Women Black Solid Quick Dry Jacket</h4>
+                        <span class="price">Rs. 1,019</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-4"></div>
+                    <div class="text">
+                        <h4 class="name">Black Rapid Dry Slim Fit Cropped Running Track Pants</h4>
+                        <span class="price">Rs. 899</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image img-5"></div>
+                    <div class="text">
+                        <h4 class="name">Women Red Solid Regular Fit Running Tshirts</h4>
+                        <span class="price">Rs. 710</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sports-wear-row">
+                
+                <div class="content">
+                    <div class="image2 img2-1"></div>
+                    <div class="text">
+                        <h4 class="name">Men Navy Blue VK Full-Zip I Sporty Jacket</h4>
+                        <span class="price">Rs. 897</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-2"></div>
+                    <div class="text">
+                        <h4 class="name">Men Black Solid Standard Fit Tracksuit</h4>
+                        <span class="price">Rs. 2,959</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-3"></div>
+                    <div class="text">
+                        <h4 class="name">Men Grey & Fluorescent Green Colourblocked Jacket</h4>
+                        <span class="price">Rs. 1,824</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-4"></div>
+                    <div class="text">
+                        <h4 class="name">Men Black Solid Rapid Dry Running Joggers</h4>
+                        <span class="price">Rs. 899</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="image2 img2-5"></div>
+                    <div class="text">
+                        <h4 class="name">Men Olive Green Rapid Dry Solid Sweatshirt</h4>
+                        <span class="price">Rs. 1,149</span>
+                        <div class="links">
+                            <a href="#" class="cart">Add to cart</a>
+                            <a href="#"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section" id="section">
+
+            <div class="container">
+                <div class="container_item">
+                    <div class="image">
+                        <i class="fas fa-location-arrow"></i>
+                    </div>
+                    <div class="text">
+                        <div class="heading">Free Shipping</div>
+                        <div class="para">Orders over $100</div>
+                    </div>
+                </div>
+                <div class="container_item">
+                    <div class="image">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <div class="text">
+                        <div class="heading">Free Returns</div>
+                        <div class="para">Within 30 days</div>
+                    </div>
+                </div>
+                <div class="container_item">
+                    <div class="image">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="text">
+                        <div class="heading">100% Secure</div>
+                        <div class="para">Payment Online</div>
+                    </div>
+                </div>
+                <div class="container_item">
+                    <div class="image">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <div class="text">
+                        <div class="heading">Best Price</div>
+                        <div class="para">Guaranteed</div>
+                    </div>
+                </div>
+                 
+            </div>
+
+        </section>
+
+
+        <!-- ==== Footer ==== -->
+        <footer id="footer">
+
+            <div class="content">
+
+                <div class="col-1">
+                    <div class="heading">persona.</div>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="heading">Help</div>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#">Track Your Order</a></li>
+                            <li><a href="#">Frequently Asked Questions</a></li>
+                            <li><a href="#">Returns and Refund Policy</a></li>
+                            <li><a href="#">Order Cancellation</a></li>
+                            <li><a href="#">Fees & Payments</a></li>
+                            <li><a href="#">Customer Care</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="heading">Shop by</div>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="heading">Keep in Touch</div>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Pinterest</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="container">
+                <p>In any concern, <span>Contact Us</span></p>
+                <p class="copyright">&copy; 2021 www.persona.com. All Rights Reserved.</p>
+            </div>
+
+        </footer>
+
+        <!-- <script>
+
+            function traversalLeft(itemNo) {
+             tempForCounterProduct=9*productsArray[itemNo].offsetWidth;
+
+             console.log(counterForTraversal,tempForCounterProduct,tempForCounterReel,tempForCounterProduct/tempForCounterReel)
+            
+             if(itemNo==0)
+             {
+                 var tempTempForCounterProduct=tempForCounterProduct+2*productsArray[0].offsetWidth;
+                 console.log(counterForTraversal[itemNo] , tempTempForCounterProduct/tempForCounterReel)
+                 if(counterForTraversal[itemNo]>tempTempForCounterProduct/tempForCounterReel)
+                     return;
+             }
+             else if(counterForTraversal[itemNo]>tempForCounterProduct/tempForCounterReel)
+                 return;
+             else
+            var reel = document.getElementsByClassName("cards-container");
+             if(reel[itemNo].style.transform!="translate(-1px)")  
+             {
+                 return;
+             }
+             counterForTraversal[itemNo]++;
+             console.log(counterForTraversal[itemNo]);
+            reel[0].style.transform += "translateX(-20.5%)";//-20%-not terminating problem
+        }
+
+        function traversalRight(itemNo) {
+             if(counterForTraversal[itemNo]<=0)
+                 return;
+
+             cons
+
+            var reel = document.getElementsByClassName("cards-container");
+            reel[0].style.transform += "translateX(20.5%)";//20%-not terminating problem
+             console.log(counterForTraversal[itemNo]);
+             counterForTraversal[itemNo]--;
+        }
+
+         </script> -->
+
+    </body>
+
+</html>
