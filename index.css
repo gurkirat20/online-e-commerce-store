@@ -5,6 +5,51 @@
     src: local('Ranille Normal'), url('fonts/RanilleNormalRegular-axEpm.woff') format('woff');
 }
 
+
+.search-box{
+    background: #E8E8E4;
+    /* z-index: 100; */
+    position: absolute;
+    top: 54px;
+    right: 15.3%;
+    width: 350px;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-top:4px solid #D80B15;
+    display: none;
+  }
+  
+  .search-box:before{
+    content: "";
+    position: absolute;
+    top: -32px;
+    right: 13px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid #D80B15;
+  }
+  
+  .search-box input[type="text"]{
+    width: 200px;
+    padding: 5px 10px;
+    margin-left: 23px;
+    border: 1px solid #D80B15;
+    outline: none;
+  }
+  
+  .search-box input[type="button"]{
+    width: 80px;
+    padding: 5px 0;
+    background: #D80B15;
+    color: #fff;
+    margin-left: -6px;
+    border: 1px solid #D80B15;
+    outline: none;
+    cursor: pointer;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -37,10 +82,10 @@ button {
 #home {
     height: 100vh;
     width: 100vw;
-    background: url('img/home_bg.png') no-repeat;
-    background-position: top 8rem right 5rem;
-    background-color: #fcf8ec8f;
+    background-image: url('img/alyssa-strohmann-TS--uNw-JqE-unsplash.jpg');
+    background-size: cover;
 }
+
 
 /* ==== navbar ==== */
 
@@ -49,18 +94,18 @@ button {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    min-height: 15vh;
-    background-color: transparent; 
+    min-height: 10vh;
+    background-color: #222222; 
 }
 
 .navbar .logo {
     font-family: 'Ranille';
     font-size: 3rem;
-    color: #000;
+    color: rgb(240, 238, 238);
 }
 
 .navbar .menu {
-    width: 35%;
+    width: 30%;
 }
 
 .navbar .menu-list {
@@ -74,11 +119,15 @@ button {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    color: #000;
+    color: rgb(240, 238, 238);
+}
+
+.navbar .menu-list a:hover {
+    border-bottom : 2px solid #CC9966;
 }
 
 .navbar .menu-list a.active {
-    border-bottom : 2px solid #000;
+    border-bottom : 2px solid #CC9966;
 }
 
 .navbar .icons {
@@ -87,37 +136,52 @@ button {
     width: 10%;
 }
 
-.navbar .icons i {
-    color: #000;
+.navbar .icons a {
+    color: rgb(240, 238, 238);
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    margin: 0.3rem;
+}
+
+.navbar .icons a:hover {
+    color: #CC9966;
 }
 
 /* ==== main ==== */
 
 .main .container {
-    margin: 4rem 0 0 15rem;
+    margin: 8rem 0 0 10rem;
 }
 
 .main h1 {
     font-size: 4rem;
-    font-family: 'Ranille';
-    color: #000;
+    line-height: 5.8rem;
+    font-family: 'Poppins', Sans-serif;
+    text-transform: capitalize;
+    color: #333333;
 }
 
 .main p {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
-    color: #000;
-    margin: 2.5rem 0 6rem 0;
+    color: #333333;
+    margin: 3rem 0 6rem 0;
 }
 
 .main a {
     font-size: 1.5rem;
-    color: #fff;
+    color: #222222e3;
     font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    padding: 1rem 2rem;
-    border-radius: 50px 0 50px 50px;
-    filter: drop-shadow(0px 0px 1px #000);
+    padding: 0.8rem 2rem;
+    border: 2px solid #222222e3;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.main a:hover {
+    border: 2px solid #222222e3;
+    background-color: #222222e3;
+    color: #fff;
 }
 
 /* ==== Top products section ==== */
@@ -125,22 +189,21 @@ button {
 #top-products {
     width: 90%;
     margin: 6rem auto;
-    /* background-color: #7c7373; */
     border-radius: 2.5rem;
     padding: 1rem;
     display: flex;
     align-items: center;
+    background-color: #EFEEEC;
 }
 
 #top-products .text-buttons-container {
     width: 22.5%;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
     font-family: 'Poppins', sans-serif;
     padding: 2rem;
-}
-
-#top-products .text-buttons-container .top {
-    font-weight: 600;
+    color: #333333;
+    font-weight: 700;
 }
 
 #top-products .text-buttons-container .buttons {
@@ -175,11 +238,14 @@ button {
     top: 0;
     height: 50%;
     width: 500%;
-    overflow-x: scroll;
     transition: all 0.5s ease-in-out;
-    /* background-color: khaki; */
     display: flex;
     align-items:flex-start;
+}
+
+.reel{
+    transition:all 0.5s ease-in;
+    display: flex;
 }
 
 
@@ -267,6 +333,7 @@ button {
     font-size: 1rem;
     float: right;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 .section-title {
@@ -275,7 +342,6 @@ button {
     margin-bottom: 2rem;
     display: inline-block;
     position: relative;
-    
 }
 
 .section-title::after {
@@ -292,7 +358,7 @@ button {
 /* ==== Categories section ==== */
 
 #categories {
-    padding: 6rem;
+    padding: 3rem 5.5rem;
 }
 
 #categories .categories-row {
@@ -309,6 +375,7 @@ button {
     height: 15rem;
     border-radius: 50%;
     margin: 2rem 0;
+    cursor: pointer;
 }
 
 #categories .categories-row .r1-one {
@@ -319,6 +386,10 @@ button {
     background-position: center center;
 }
 
+#categories .categories-row .r1-one:hover {
+    background-color: #163938d0;
+}
+
 #categories .categories-row .r1-two {
     background: url('img/category_shoes.png');
     background-color: #19233ba2;
@@ -327,12 +398,19 @@ button {
     background-position: center center;
 }
 
+#categories .categories-row .r1-two:hover {
+    background-color: #19233be0;
+}
+
 #categories .categories-row .r1-three {
     background: url('img/category_jacket.png');
     background-color: #f1ab56a4;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+}
+#categories .categories-row .r1-three:hover {
+    background-color: #f1ab56e7;
 }
 
 #categories .categories-row .r1-four {
@@ -343,12 +421,20 @@ button {
     background-position: center center;
 }
 
+#categories .categories-row .r1-four:hover {
+    background-color: #c5ac77;
+}
+
 #categories .categories-row .r1-five {
     background: url('img/category_shorts.png');
     background-color: #42453094;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+#categories .categories-row .r1-five:hover {
+    background-color: #424530d8;
 }
 
 #categories .categories-row .r2-one {
@@ -359,12 +445,20 @@ button {
     background-position: center center;
 }
 
+#categories .categories-row .r2-one:hover {
+    background-color: #424f76e3;
+}
+
 #categories .categories-row .r2-two {
     background: url('img/category_mini_dress.png');
     background-color: #C8C9CB;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+#categories .categories-row .r2-two:hover {
+    background-color: #919192;
 }
 
 #categories .categories-row .r2-three {
@@ -375,12 +469,20 @@ button {
     background-position: center center;
 }
 
+#categories .categories-row .r2-three:hover {
+    background-color: #c2979b;
+}
+
 #categories .categories-row .r2-four {
     background: url('img/category_shoes2.png');
     background-color: #cdeeffb0;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+#categories .categories-row .r2-four:hover {
+    background-color: #cdeeff;
 }
 
 #categories .categories-row .r2-five {
@@ -391,329 +493,207 @@ button {
     background-position: center center;
 }
 
+#categories .categories-row .r2-five:hover {
+    background-color: #be9093e3;
+}
+
 #categories .categories-row span {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
 }
 
 
-/* ==== Indian-wear section ==== */
-
-#indian-wear {
-    padding: 6rem;
+.trending {
+    width: 90%;
+    margin: 4rem auto;
+    font-family: "Poppins", sans-serif;
 }
 
-#indian-wear .indian-wear-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2.5rem; 
+.trending .section-title {
+    font-weight: 700;
 }
-
-#indian-wear .indian-wear-row .content {
-    width: 22rem;
+  
+.trending .grid-container {
+    display: grid;
     height: auto;
-    margin: 2rem;
+    margin-top: 5rem;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 3.5rem;
+    column-gap: 2.5rem;
+}
+  
+.trending .grid-item {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 30px;
+}
+  
+.trending .long { 
+    grid-row: span 2;
+    grid-column: span 3;
+}
+  
+.trending .tall {
+    min-height: 320px;
+    min-width: 220px;  
+    grid-row: span 3;
+    grid-column: span 2; 
 }
 
-#indian-wear .indian-wear-row .image {
-    width: 100%;
-    height: 25rem;
+.trending .one {
+    background: url('images/trending_card_1.jpg');
+    background-size: cover;
 }
 
-#indian-wear .indian-wear-row .img-1 {
-    background: url('img/Geometric_print_flared_kurta.png') no-repeat;
+.trending .one:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.trending .two {
+    background-image: url('images/trending_card_2.jpg');
+    background-size: cover;
+}
+
+.trending .two:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.trending .three {
+    background-color: #E87474;
+    background-image: url('images/trending_card_3.png');
+    background-size: 60% 150%;
+    background-repeat: no-repeat;
+    background-position: 120% 100%;
+}
+
+.trending .four {
+    background-color: #E5A1AF;
+    background-image: url('images/trending_card_4.png');
+    background-size: 40% auto;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.trending .five {
+    background-color: #ABAFD0;
+    background-image: url('images/trending_card_5.png');
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position:  150% 100%;
 }
 
-#indian-wear .indian-wear-row .img-2 {
-    background: url('img/zari_weaving_art_silk_saree.png')  no-repeat;
+.trending .six {
+    background-color: #018C88;
+    background-image: url('images/trending_card_6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.trending .six:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.trending .seven {
+    background-image: url('images/trending_card_7.jpg');
+    background-size: cover;
+}
+
+.trending .seven:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.trending .eight {
+    background-color: #F5EB8E;
+    background-image: url('images/trending_card_8.png');
     background-size: contain;
-}
+    background-repeat: no-repeat;
+    background-position: 170% 100%;
+}    
 
-#indian-wear .indian-wear-row .img-3 {
-    background: url('img/indian_print_gown_dress.png') no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .img-4 {
-    background: url('img/printed_tiered_dress_with_shrug.png') no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .img-5 {
-    background: url('img/floral_print_fit_&_flare_dress.png') no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .image2 {
-    width: 100%;
-    height: 25rem;
-    margin-bottom: 1.8rem;
-}
-
-#indian-wear .indian-wear-row .img2-1 {
-    background: url('img/Blue_Ethnic_Motifs_Printed_Kurta.jpg') no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .img2-2 {
-    background: url('img/kurta_set_with_nehru_jacket.png')  no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .img2-3 {
-    background: url('img/black_&_pink_sherwani_set.png') no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .img2-4 {
-    background: url('img/woven_design_straight_kurta.png') no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .img2-5 {
-    background: url('img/black_&_white_kurta_with_churidar.png') no-repeat;
-    background-size: contain;
-}
-
-#indian-wear .indian-wear-row .text {
-    font-family: 'Poppins', sans-serif;
-}
-
-#indian-wear .indian-wear-row .text .name {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-}
-
-#indian-wear .indian-wear-row .text .links {
-    margin-top: 1.8rem;
-}
-
-#indian-wear .indian-wear-row .text .cart {
-    color: #000;
-    border: 1px solid #000;
-    padding: 0.5rem;
-}
-
-#indian-wear .indian-wear-row .text i {
-    color: #000;
-    margin-left: 0.8rem;
-    font-size: 1.2rem;
-}
-
-
-/* ==== Western-wear section ==== */
-
-#western-wear {
-    padding: 6rem;
-}
-
-#western-wear .western-wear-row {
+.trending .wishlist {
+    height: 3rem;
+    width: 3rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: 2.5rem; 
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.6rem;
+    position: relative;
+    left: 80%;
+    top: 5%;
+    cursor: pointer;
 }
 
-#western-wear .western-wear-row .content {
-    width: 22rem;
-    height: auto;
-    margin: 2rem;
-}
-
-#western-wear .western-wear-row .image {
-    width: 100%;
-    height: 25rem;
-    margin-bottom: 1.8rem;
-}
-
-#western-wear .western-wear-row .img-1 {
-    background: url('img/west1.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img-2 {
-    background: url('img/west2.png')  no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img-3 {
-    background: url('img/west3.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img-4 {
-    background: url('img/west4.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img-5 {
-    background: url('img/west5.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .image2 {
-    width: 100%;
-    height: 25rem;
-    margin-bottom: 1.8rem;
-}
-
-#western-wear .western-wear-row .img2-1 {
-    background: url('img/westmen1.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img2-2 {
-    background: url('img/westmen2.png')  no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img2-3 {
-    background: url('img/westmen3.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img2-4 {
-    background: url('img/westmen4.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .img2-5 {
-    background: url('img/westmen5.png') no-repeat;
-    background-size: contain;
-}
-
-#western-wear .western-wear-row .text {
-    font-family: 'Poppins', sans-serif;
-}
-
-#western-wear .western-wear-row .text .name {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-}
-
-#western-wear .western-wear-row .text .links {
-    margin-top: 1.8rem;
-}
-
-#western-wear .western-wear-row .text .cart {
+.trending .wishlist i {
+    font-size: 1.5rem;
     color: #000;
-    border: 1px solid #000;
-    padding: 0.5rem;
 }
 
-#western-wear .western-wear-row .text i {
-    color: #000;
-    margin-left: 0.8rem;
-    font-size: 1.2rem;
+.trending .tall .text {
+    width: 60%;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    position: relative;
+    top: 50%;
+    left: 15%;
 }
 
-
-/* ==== Sports-wear section ==== */
-
-#sports-wear {
-    padding: 6rem;
+.trending .tall .text::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: -8%;
 }
 
-#sports-wear .sports-wear-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2.5rem; 
+.trending .long .text {
+    margin: 5.5rem 0 0 2rem;
 }
 
-#sports-wear .sports-wear-row .content {
-    width: 22rem;
-    height: auto;
-    margin: 2rem;
+.trending .long .text h4 {
+    font-size: 2.8rem;
+    line-height: 4.8rem;
+    font-weight: 600;
 }
 
-#sports-wear .sports-wear-row .image {
-    width: 100%;
-    height: 25rem;
-    margin-bottom: 1.8rem;
+.trending .long .text h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-#sports-wear .sports-wear-row .img-1 {
-    background: url('img/sports1.jpg') no-repeat;
-    background-size: contain;
+.trending .eight .text {
+    width: 20%;
+    font-size: 3rem;
+    line-height: 3.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 4rem 0 0 4rem;
+    position: relative;
 }
 
-#sports-wear .sports-wear-row .img-2 {
-    background: url('img/sports2.png')  no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .img-3 {
-    background: url('img/sports3.png') no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .img-4 {
-    background: url('img/sports4.png') no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .img-5 {
-    background: url('img/sports5.jpg') no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .image2 {
-    width: 100%;
-    height: 25rem;
-    margin-bottom: 1.8rem;
-}
-
-#sports-wear .sports-wear-row .img2-1 {
-    background: url('img/sportsmen1.png') no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .img2-2 {
-    background: url('img/sportsmen2.png')  no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .img2-3 {
-    background: url('img/sportsmen3.png') no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .img2-4 {
-    background: url('img/sportsmen4.png') no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .img2-5 {
-    background: url('img/sportsmen5.png') no-repeat;
-    background-size: contain;
-}
-
-#sports-wear .sports-wear-row .text {
-    font-family: 'Poppins', sans-serif;
-}
-
-#sports-wear .sports-wear-row .text .name {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-}
-
-#sports-wear .sports-wear-row .text .links {
-    margin-top: 1.8rem;
-}
-
-#sports-wear .sports-wear-row .text .cart {
-    color: #000;
-    border: 1px solid #000;
-    padding: 0.5rem;
-}
-
-#sports-wear .sports-wear-row .text i {
-    color: #000;
-    margin-left: 0.8rem;
-    font-size: 1.2rem;
+.trending .eight .text::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: -12%;
 }
 
 
@@ -768,48 +748,169 @@ button {
     padding: 6rem 6rem 6rem 6rem;
     width: 100%;
     height: auto;
-    background-color: #7661613b;
+    background-color: #222222;
 }
 
 #footer .content {
     display: flex;
     justify-content: space-around;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+#footer .content::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -15%;
+    left: 5%;
 }
 
 #footer .content .heading {
-    font-size: 1.8rem;
-    color: #cf9230;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #CC9966;
+    margin-bottom: 3rem;
     font-weight: 550;
 }
 
 #footer .content .list {
     font-size: 1rem;
-    color: #000;
+    color: #fff;
+}
+
+#footer .content .list li {
+    margin-bottom: 0.5rem;
 }
 
 #footer .content .list a {
     font-size: 1.2rem;
-    color: #000;
+    color: #fff;
     font-weight: 400;
-    padding: 0 0.3rem;
+}
+
+#footer .content .list a:hover {
+    color: #CC9966;
 }
 
 #footer .container {
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-}
-
-#footer .container {
-    margin-top: 3rem;
+    margin-top: 8rem;
     text-align: center;
+    color: #fff;
 }
 
 
+/****Responsive CSS****/
+@media ( max-width : 600px )
+{
+    #home{
+        background-blend-mode: color;
+        background-position: center;
+    }
 
+    /* .categories{display: flex;flex-wrap: wrap;} */
+    .categories-row{display: flex;flex-wrap: wrap;}
 
+        
+    .main .container {
+        /* align-items: center; */
 
+        justify-content: center;
+        display:run-in;
+        margin:0;
+        padding-top: 20vh;
+    }
+
+    .main p,h1 {
+        font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
+        margin:0;
+        text-align: center;
+    }
+
+    .main a {
+        /* margin-top: 100px; */
+        font-size: 2rem;
+        margin: 5vh 0 0 43vw;
+        padding:0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50px 0 50px 50px;
+        width: 9rem;
+        
+    }
+    .top-products{
+        /* display:; */
+        flex-wrap: wrap;
+        display: inline-flex;
+        background-color: ivory;
+        height: max-content;width: max-content;
+
+    }
+    .text-buttons-container{
+        display:inline-block;
+        text-align: center;
+        line-height: 1;
+        justify-content: center;
+        align-items: center;
+        width: 100vw !important;
+        overflow: hidden;
+    }
+    .cards-container{display: none;width: 100% !important;}
+    /* .reel-div{display: none;}
+    .reel{display: none;}
+    .card{display: none;} */
+
+    .content
+    {
+        width:fit-content !important ;
+
+        /* border:10px ;
+        border-style: solid;
+        border-color: greenyellow; */
+        border: 10px outset rgba(128, 128, 128, 0.418);
+        text-align: center;
+        /* padding-bottom: 20px; */
+        padding:0 0 20px 0;
+        
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align:left; 
+    }
+    .col-1,.col-2,.col-3,.col-4{
+        padding:0 0 4vh 10vw;
+
+        position: relative;
+        width:100%
+    }
+    .indian-wear-row,.western-wear-row,.sports-wear-row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .image2{
+        display: flex;
+        justify-content: space-around;
+    }
+    /* *{
+        background-color: #212121;
+    } */
+    /* .content:first-child
+    {
+        border: 0;
+    } */
+    /* .section .container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    } */
+}
 
 
 
